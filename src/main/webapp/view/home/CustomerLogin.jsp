@@ -61,7 +61,27 @@ body {
             color: #764ba2;
             text-decoration: underline;
         }
-    
+    @keyframes slideInOutRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+.alert {
+  animation: slideInOutRight 3s ease forwards;
+}
   </style>
 </head>
 <body>
@@ -166,6 +186,38 @@ body {
     </div>
   </div>
 </div>
+<%
+	if (request.getParameter("res") != null) {
+		int res = Integer.parseInt(request.getParameter("res"));
+		if (res == 5) {
+	%>
+	<div
+		class="alert alert-danger alert-dismissible position-fixed top-0 end-0 m-3"
+		style="width: 400px; z-index: 9999;">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Failed!</strong> Invalid Login details.
+	</div>
 
+	<%
+	}
+	}
+	%>
+	
+	<%
+	if (request.getParameter("n") != null) {
+		int n = Integer.parseInt(request.getParameter("n"));
+		if (n == 9) {
+	%>
+	<div
+		class="alert alert-danger alert-dismissible position-fixed top-0 end-0 m-3"
+		style="width: 400px; z-index: 9999;">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		<strong>Failed!</strong> Enter correct details for Registration.
+	</div>
+
+	<%
+	}
+	}
+	%>
 </body>
 </html>

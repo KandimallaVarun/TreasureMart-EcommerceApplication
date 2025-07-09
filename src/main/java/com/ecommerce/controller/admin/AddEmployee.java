@@ -11,6 +11,7 @@ import jakarta.servlet.http.Part;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.ecommerce.controller.home.PasswordEncoderDecoder;
 import com.ecommerce.dao.EmployeeDAO;
 import com.ecommerce.dbutil.GlobalVariables;
 import com.ecommerce.model.Employees;
@@ -50,6 +51,7 @@ public class AddEmployee extends HttpServlet {
 		String designation = request.getParameter("designation");
 		int salary = Integer.parseInt(request.getParameter("salary"));
 		String password = request.getParameter("password");
+	    String encryptedPassword = PasswordEncoderDecoder.encoder(password);
 
 		// image upload
 		/* Receive file uploaded to the Servlet from the HTML5 form */
@@ -71,7 +73,7 @@ public class AddEmployee extends HttpServlet {
 		employees.setEmail(email);
 		employees.setDesignation(designation);
 		employees.setSalary(salary);
-		employees.setPassword(password);
+		employees.setPassword(encryptedPassword);
 		employees.setEmployeePic(fileName);
 
 		EmployeeDAO dao = new EmployeeDAO();

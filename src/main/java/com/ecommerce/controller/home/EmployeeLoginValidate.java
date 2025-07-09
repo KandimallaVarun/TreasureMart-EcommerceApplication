@@ -38,10 +38,11 @@ public class EmployeeLoginValidate extends HttpServlet {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+	    String encryptedPassword = PasswordEncoderDecoder.encoder(password);
 
 		Employees employee = new Employees();
 		employee.setEmail(email);
-		employee.setPassword(password);
+		employee.setPassword(encryptedPassword);
 
 		EmployeeDAO dao = new EmployeeDAO();
 		Employees employee_new = dao.loginValidate(employee);

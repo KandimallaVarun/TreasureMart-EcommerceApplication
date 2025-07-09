@@ -30,13 +30,13 @@
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 60px !important;
   background-color: var(--background);
 }
 
 .sidebar {
   position: sticky;
-  top: 80px;
+  top: 80px !important;
   height: calc(100vh - 120px);
   overflow-y: auto;
   width: 250px;
@@ -281,7 +281,7 @@ body {
 <div class="container">
   <div class="row">
     <!-- Sidebar -->
-    <div class="col-md-3 md-mt-4">
+    <div class="col-md-3 mt-4">
       <div class="sidebar">
         <h2 class="text-danger">Categories</h2>
         <ul>
