@@ -4,6 +4,8 @@ TreasureMart is a full-stack Java-based eCommerce application designed for manag
 
 📽️ **Watch the demo video** below to see the application in action:
 
-[![Watch Video](https://raw.githubusercontent.com/KandimallaVarun/TreasureMart-EcommerceApplication/main/Screenshot%20(163).png)](https://drive.google.com/file/d/1tPN0duPrQZJ53zf5jMqpCKUtVpq8_KLs/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1tPN0duPrQZJ53zf5jMqpCKUtVpq8_KLs/view?usp=sharing" target="_blank">
+  <img src="https://raw.githubusercontent.com/KandimallaVarun/TreasureMart-EcommerceApplication/main/Screenshot%20(163).png" alt="Watch Video" width="600"/>
+</a>
 
 > Click the image above to watch the working demo hosted on Google Drive.
